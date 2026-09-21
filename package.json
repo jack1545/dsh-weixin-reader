@@ -1,0 +1,53 @@
+{
+  "name": "dsh-weixin-reader",
+  "version": "0.1.0",
+  "description": "WeChat Official Account article reader for DeepSeek Harness: parses mp.weixin.qq.com article bodies into clean Markdown for the model",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=0.0.1-rc.1 <0.1.0 || >=0.1.0-rc.1 <0.2.0-0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek",
+    "deepseek-harness",
+    "plugin",
+    "weixin",
+    "wechat",
+    "mp-weixin",
+    "article",
+    "reader",
+    "markdown"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jack1545/dsh-weixin-reader.git"
+  },
+  "license": "MIT"
+}
