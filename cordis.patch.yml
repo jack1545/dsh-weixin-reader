@@ -1,0 +1,16 @@
+# dsh-weixin-reader bundle patch.
+#
+# Applied when this package is listed in a profile's dsh.profile.bundles
+# (installed with `dsh plugin --profile <name> add <path>`). The row is keyed by
+# package name, not a source path, so Node module resolution finds the
+# installed code.
+#
+# Config keys documented in README.md. Everything a deployment might tune lives
+# here rather than in the code.
+- insert:
+    - id: dsh-weixin-reader
+      name: dsh-weixin-reader
+      config:
+        timeoutMs: 30000
+        maxChars: 60000
+        saveToFile: false
