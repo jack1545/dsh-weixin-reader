@@ -33,7 +33,7 @@ dsh plugin --profile web add github:jack1545/dsh-weixin-reader
 先验证层已生效、暂不启动：
 
 ```sh
-dsh --profile web --dump-config   # 应出现 "# == dsh-weixin-reader" 层
+dsh --profile web --dump-config   # should contain a "# == dsh-weixin-reader" layer
 ```
 
 卸载：
@@ -72,10 +72,10 @@ dsh plugin --profile web remove dsh-weixin-reader
 
 ```
 dsh-weixin-reader/
-├── package.json         # 声明 dsh.bundle
-├── cordis.patch.yml     # 安装时应用的层
-├── index.js             # 插件入口：注册 weixin_read 与提示段落
-└── lib/parser.js        # 零依赖解析器，可脱离 Harness 单独测试
+├── package.json         # declares dsh.bundle
+├── cordis.patch.yml     # the layer applied on install
+├── index.js             # plugin entry: registers weixin_read and the prompt section
+└── lib/parser.js        # zero-dependency parser, testable outside Harness
 ```
 
 `lib/parser.js` 可独立使用：
